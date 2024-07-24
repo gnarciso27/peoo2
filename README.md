@@ -29,8 +29,10 @@
 
 // 41. Escreva um programa que imprima todos os números de 1 a 50.
 
-        const x = 1;
-        while(x<=100){
-            x ++
-            console.log(x)
-        }
+      document.querySelector('#bnt').addEventListener('click', () => {
+            let x = 0;
+            while(x<100){
+                x ++
+                console.log(x)
+            }
+        })
