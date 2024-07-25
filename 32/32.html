@@ -1,0 +1,25 @@
+<!--Repaint
+Ao mudar estilos de elementos que não afetam a posição desse elemento na página (como background-color, border-color, visibility etc), o browser apenas “repinta” (repaint) o elemento com os novos estilos aplicados (que significa que um repaint ou restyle está acontecendo).
+
+Reflow
+Quando as alterações afetam o conteúdo ou estrutura do documento ou a posição de um elemento, um refluxo (reflow) ou relayout acontece. Essas alterações são geralmente desencadeadas por:
+
+Manipulação do DOM (adição de elemento, exclusão, alteração ou alterar na ordem dos elementos)
+Alterações de conteúdos, incluindo alterações de texto em campos do formulário
+Cálculos e/ou alterações de propriedades CSS
+Adição ou remoção de folhas de estilo
+Alteração no atributo class
+Manipulação na janela do navegador (redimensionamento, rolagem etc)
+Ativação de pseudo-classe (:hover)
+Como navegadores otimizam a renderização
+Navegadores tentam fazer seu melhor para restringir repaint/reflow apenas para a área que abrange os elementos
+ alterados. Por exemplo, uma mudança de tamanho em um elemento posicionado com absolute ou fixed afeta somente o 
+ próprio elemento e seus descendentes, enquanto uma mudança semelhante em um elemento static (o padrão de posicionamento
+  em CSS) provoca reflow em todos os elementos subsequentes.
+
+Outra técnica de otimização usada pelos browsers é que, durante a execução de trechos de código JavaScript, eles 
+armazenam as alterações e as aplicam em uma única passada depois que o código foi executado. 
+https://desenvolvimentoparaweb.com/miscelanea/desenvolvedor-frontend-renderizacao-paginas-web/
+--> 
+
+
