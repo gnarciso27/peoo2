@@ -1,0 +1,43 @@
+<!--
+    replacedNode = parentNode.replaceChild(newChild, oldChild);
+newChild é o novo elemento que será inserido no lugar do oldChild. Se já existir no DOM, será removido primeiro para depois ser inserido.
+oldChild é o elemento existente que será substituído.
+replacedNode é elemento substituído. É o mesmo elemento que oldChild.
+https://developer.mozilla.org/pt-BR/docs/Web/API/Node/replaceChild
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span id="childSpan">foo bar</span>
+    </div>
+    <script>
+        var sp1 = document.createElement("span");
+
+        // Adiciona um ID 'newSpan' para o elemento
+        sp1.setAttribute("id", "newSpan");
+
+        // Adiciona contéudo para o elemento
+        var sp1_content = document.createTextNode("new replacement span element.");
+
+        // Coloca o conteúdo no elemento
+        sp1.appendChild(sp1_content);
+
+        // Procura o elemento que será substituído
+        var sp2 = document.getElementById("childSpan");
+        var parentDiv = sp2.parentNode;
+
+        // Substituí o elemento que já existe (sp2) por o novo elemento (sp1)
+        parentDiv.replaceChild(sp1, sp2);
+    </script>
+</body>
+
+</html>
