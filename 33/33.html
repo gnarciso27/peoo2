@@ -1,0 +1,43 @@
+<!--
+Fragmentos de documentos, ou DocumentFragments, são objetos leves que servem como contêineres para um grupo de nós. 
+Eles são usados para armazenar um conjunto de elementos DOM que podem ser inseridos de uma só vez no documento principal. 
+Isso pode melhorar a performance da manipulação do DOM, pois as operações de inserção e remoção são feitas em memória, 
+fora do DOM real, reduzindo assim a quantidade de reflows e repaints no navegador.
+
+Vantagens do uso de DocumentFragments
+Melhoria de Performance: Inserir múltiplos elementos no DOM individualmente pode causar múltiplos reflows e repaints, 
+o que é custoso em termos de performance. Com DocumentFragment, você pode preparar o conteúdo fora do DOM principal e 
+inseri-lo de uma só vez, resultando em apenas um reflow e repaint.
+
+Manipulação Fora do DOM Principal: Como os fragmentos não são parte do DOM principal, a manipulação dos elementos dentro 
+deles não causa alterações imediatas na renderização da página.
+https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        let fragment = document.createDocumentFragment();
+
+        
+        for (let i = 0; i < 10; i++) {
+            let newDiv = document.createElement('div');
+            newDiv.textContent = `Este é o div número ${i}`;
+            fragment.appendChild(newDiv);
+        }
+
+        
+        document.body.appendChild(fragment);
+
+    </script>
+</body>
+
+</html>
