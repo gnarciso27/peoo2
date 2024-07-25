@@ -1,0 +1,39 @@
+<!--A delegação de eventos JavaScript é uma técnica poderosa que permite lidar com eventos em elementos filhos 
+através de um único manipulador de eventos em um elemento pai. Em vez de atribuir um manipulador de eventos a cada 
+elemento filho individualmente, a delegação de eventos permite que você atribua um único manipulador de eventos ao 
+elemento pai, que será responsável por lidar com os eventos dos elementos filhos.
+Quando um evento ocorre em um elemento filho, o evento é propagado para o elemento pai através do que é conhecido como “propagação de eventos”. O manipulador de eventos atribuído ao elemento pai pode então verificar o alvo do evento para determinar qual elemento filho disparou o evento e executar a ação apropriada.
+
+Para implementar a delegação de eventos, você precisa usar o método addEventListener() para atribuir um manipulador de 
+eventos ao elemento pai. Em seguida, dentro do manipulador de eventos, você pode verificar o alvo do evento usando a 
+propriedade event.target e executar a ação desejada com base no elemento filho que disparou o evento.
+
+https://blog.escolaninjawp.com.br/glossario/o-que-e-javascript-event-delegation-delegacao-de-eventos-javascript/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegação de Eventos</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <script>
+        const lista = document.getElementById('lista');
+        
+        lista.addEventListener('click', (event) => {
+            const item = event.target;
+            if (item.tagName === 'LI') {
+                alert(item.textContent);
+            }
+        });
+    </script>
+</body>
+</html>

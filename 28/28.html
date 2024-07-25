@@ -1,0 +1,28 @@
+<!--
+Você pode acessar o elemento pai de um elemento usando a propriedade parentNode ou parentElement.
+Você pode acessar os elementos filhos de um elemento usando children ou childNodes.
+Você pode acessar o primeiro e último elemento filho usando firstElementChild e lastElementChild.
+Você pode acessar o próximo e o elemento irmão anterior usando nextElementSibling e previousElementSibling.
+Se você precisa navegar por todos os nós, incluindo nós de texto, você pode usar firstChild, lastChild, nextSibling, e previousSibling.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação DOM</title>
+</head>
+<body>
+    <div id="pai">
+        <p class="filho">Filho 1</p>
+        <p class="filho">Filho 2</p>
+        <p class="filho">Filho 3</p>
+    </div>
+
+    <script>
+        const pai = document.getElementById('pai');
+        const filhos = pai.children; // ou pai.childNodes para incluir nós de texto
+        console.log(filhos); // HTMLCollection(3) [p.filho, p.filho, p.filho]
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+Vamos ver uma aplicação prática desta solução:
+
+<div>
+  <p id="elemento-para-remover">Remover este parágrafo</p>
+</div>
+Este é o nosso HTML, nosso objetivo é remover o parágrafo com o id de elemento-para-remover
+
+Veja agora o código JavaScript necessário:
+
+var elemento = document.querySelector("#elemento-para-remover");
+elemento.parentNode.removeChild(elemento);
+No código acima selecionamos primeiramente o parágrafo, pelo id que o HTML nos fornece
+
+Depois identificamos o nó pai com o método parentNode
+
+E por fim aplicamos removeChild no próprio nó selecionado
+
+Desta forma o elemento é automaticamente removido, e resolvemos o nosso problema, viu como foi simples?
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="elemento-para-remover">Remover este parágrafo</p>
+    </div>
+
+    <script>
+        let elemento = document.querySelector("#elemento-para-remover");
+        elemento.parentNode.removeChild(elemento);
+    </script>
+</body>
+
+</html>
