@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Alteração de Atributos</title>
+</head>
+<body>
+    <img id="myImage" src="image1.jpg" alt="Imagem original" width="300" height="200">
+    <button id="changeAttributes">Alterar Atributos</button>
+
+    <script>
+        var image = document.getElementById('myImage');
+        var button = document.getElementById('changeAttributes');
+        button.addEventListener('click', function() {
+            image.setAttribute('src', 'image2.jpg');
+            image.setAttribute('alt', 'Imagem alterada');
+            image.setAttribute('width', '500');
+            image.setAttribute('height', '400');
+        });
+    </script>
+</body>
+</html>

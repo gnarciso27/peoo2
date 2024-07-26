@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+</head>
+<body>
+    <div class="exemplo">Elemento 1</div>
+    <div class="exemplo">Elemento 2</div>
+    <div class="outra-classe">Elemento 3</div>
+
+    <script>
+        
+        var elementos = document.querySelectorAll('.exemplo');
+        elementos.forEach(function(elemento, index) {
+            elemento.textContent = 'Texto alterado ' + (index + 1);
+        });
+    </script>
+</body>
+</html>

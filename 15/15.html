@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+</head>
+<body>
+    <div class="container">
+        <p class="texto">Parágrafo 1</p>
+        <p class="texto">Parágrafo 2</p>
+        <p id="especial">Parágrafo Especial</p>
+    </div>
+
+    <script>
+        var primeiroTexto = document.querySelector('.texto');
+        primeiroTexto.textContent = 'Texto alterado';
+        var paragrafoEspecial = document.querySelector('#especial');
+        paragrafoEspecial.textContent = 'Este é um parágrafo especial!';
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Remoção de Atributos</title>
+</head>
+<body>
+    <img id="myImage" src="image1.jpg" alt="Imagem original" width="300" height="200">
+    <button id="removeAttributes">Remover Atributos</button>
+
+    <script>
+        var image = document.getElementById('myImage');
+        var button = document.getElementById('removeAttributes');
+        button.addEventListener('click', function() {
+            image.removeAttribute('src');
+            image.removeAttribute('alt');
+            image.removeAttribute('width');
+            image.removeAttribute('height');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Classe CSS</title>
+    <style>
+        .novaClasse {
+            background-color: yellow;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="meuElemento">Texto de exemplo</div>
+    <button onclick="adicionarClasse()">Adicionar Classe</button>
+
+    <script>
+        function adicionarClasse() {
+            var elemento = document.getElementById('meuElemento');
+            elemento.classList.add('novaClasse');
+        }
+    </script>
+</body>
+</html>

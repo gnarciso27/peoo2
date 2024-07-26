@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Leitura de Atributos</title>
+</head>
+<body>
+    <div id="myElement" class="myClass" data-info="123" title="Título do Elemento">
+        Conteúdo do Elemento
+    </div>
+
+    <script>
+        var element = document.getElementById('myElement');
+        var id = element.getAttribute('id');
+        var className = element.getAttribute('class'); 
+        var dataInfo = element.getAttribute('data-info'); 
+        var title = element.getAttribute('title'); 
+        console.log('ID:', id);
+        console.log('Classe:', className);
+        console.log('Data-info:', dataInfo);
+        console.log('Título:', title);
+        var hasTitle = element.hasAttribute('title');
+        console.log('Tem atributo "title"?', hasTitle);
+        var hasNonExistent = element.hasAttribute('non-existent'); 
+        console.log('Tem atributo "non-existent"?', hasNonExistent);
+    </script>
+</body>
+</html>

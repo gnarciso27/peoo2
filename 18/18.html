@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Criação de Elementos</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Lista de Tarefas</h1>
+        <ul id="taskList">
+            <li>Comprar leite</li>
+            <li>Estudar JavaScript</li>
+        </ul>
+    </div>
+
+    <script>
+    
+        var taskList = document.getElementById('taskList');
+        var newTask = document.createElement('li');
+        newTask.textContent = 'Ler um livro';
+        taskList.appendChild(newTask);
+        var addButton = document.createElement('button');
+        addButton.textContent = 'Adicionar Tarefa';
+        addButton.addEventListener('click', function() {
+            
+            var taskInput = prompt('Digite a nova tarefa:');
+            if (taskInput) {
+                var newTask = document.createElement('li');
+                newTask.textContent = taskInput;
+                taskList.appendChild(newTask);
+            }
+        });
+
+        var container = document.getElementById('container');
+        container.appendChild(addButton);
+        
+    </script>
+</body>
+</html>

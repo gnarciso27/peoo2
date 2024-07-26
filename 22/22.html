@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Leitura de Estilos Inline</title>
+    <style>
+        .example {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement" style="color: red; font-size: 20px; background-color: yellow;">
+        Texto com estilos inline
+    </div>
+    <button id="readStyles">Ler Estilos Inline</button>
+
+    <script>
+        var element = document.getElementById('myElement');
+        var button = document.getElementById('readStyles');
+        button.addEventListener('click', function() {
+            var color = element.style.color;
+            var fontSize = element.style.fontSize;
+            var backgroundColor = element.style.backgroundColor;
+            console.log('Cor:', color); 
+            console.log('Tamanho da Fonte:', fontSize); 
+            console.log('Cor de Fundo:', backgroundColor); 
+        });
+    </script>
+</body>
+</html>

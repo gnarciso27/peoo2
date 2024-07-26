@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo innerHTML</title>
+</head>
+<body>
+    <div id="container">
+        <p>Parágrafo original.</p>
+    </div>
+    <script>
+        var container = document.getElementById('container');
+        container.innerHTML = `
+            <h1>Meu Novo Título</h1>
+            <p>Este é um novo parágrafo.</p>
+        `;
+    </script>
+</body>
+</html>
