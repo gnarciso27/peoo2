@@ -1,17 +1,11 @@
-function verificarPalindromo(str) {
-   
-    let stringLimpa = str.replace(/[\W_]/g, '').toLowerCase();
-  
-    
-    let stringReversa = stringLimpa.split('').reverse().join('');
-  
-   
-    return stringLimpa === stringReversa;
+function verificarPalindromo(strL){
+  const strI = strL.split('').reverse().join('');
+  if(strL === strI){
+      return 'true';
+  }else{
+      return 'false';
   }
-  
-  
-  console.log(verificarPalindromo("A man, a plan, a canal, Panama")); 
-  console.log(verificarPalindromo("racecar"));                        
-  console.log(verificarPalindromo("hello"));                          
-  console.log(verificarPalindromo("Was it a car or a cat I saw"));    
+}
+const strL = 'ala';
+console.log(verificarPalindromo(strL));   
   

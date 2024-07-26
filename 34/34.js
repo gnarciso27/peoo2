@@ -1,13 +1,13 @@
-function verificarParOuImpar(numero) {
-    if (numero % 2 === 0) {
-      return "O número é par";
-    } else {
-      return "O número é ímpar";
-    }
+function ParOuImpar(numero){
+  if(numero %2 === 0){
+      return 'par';
+  }else{
+      return 'impar';
   }
-  
- 
-  console.log(verificarParOuImpar(4));  
-  console.log(verificarParOuImpar(7));  
-  console.log(verificarParOuImpar(0));  
-  console.log(verificarParOuImpar(-3)); 
+}
+const number1 = ParOuImpar(2);
+const number2 = ParOuImpar(9);
+const number3 = ParOuImpar(6);
+console.log(number1);
+console.log(number2);
+console.log(number3);

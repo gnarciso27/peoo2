@@ -1,13 +1,10 @@
-function retornarMaiorNumero(numero1, numero2) {
-    if (numero1 > numero2) {
-      return numero1;
-    } else {
-      return numero2;
-    }
+function doisNumero(a,b){
+  if(a > b){
+      return a;
+  }else{
+      return b;
   }
-  
- 
-  console.log(retornarMaiorNumero(10, 20)); 
-  console.log(retornarMaiorNumero(30, 15)); 
-  console.log(retornarMaiorNumero(25, 25));  
-  console.log(retornarMaiorNumero(-5, -10));
+}
+const a = 9
+const b = 21
+console.log(doisNumero(a,b))
