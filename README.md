@@ -1,3 +1,6 @@
+https://www.crazygames.com.br/jogos/bloxdhop-io?utm_source=invite&g=classic_survival&lobby=1234321
+
+
 //1. Explique os princípios da programação estruturada e como ela organiza o código. Forneça exemplos em JavaScript. 
 
     Os princípios da programação estruturada são: Sequência, Seleção, Iteração, Modularização.
